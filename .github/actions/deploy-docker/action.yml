@@ -1,0 +1,10 @@
+name: 'Deploy to AWS s3'
+description: 'Deploy a static website via AWS s3.'
+outputs:
+  dirlist:
+    description: 'The directory list.'
+  work_dir:
+    description: 'The work directory.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

@@ -1,0 +1,15 @@
+name: fetch dir
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@3
+      - name: Deploy docker action
+        id: docker-deploy
+        uses: ./.github/actions/deploy-docker
+      - name: output information
+        run: |
+          echo: "The dir list: ${{steps.docker-deploy.outputs.dirlist}}"
+          echo: "The work directory: ${{steps.docker-deploy.outputs.work_dir}}"
