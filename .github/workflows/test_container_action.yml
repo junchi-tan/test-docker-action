@@ -11,5 +11,5 @@ jobs:
         uses: ./.github/actions/deploy-docker
       - name: output information
         run: |
-          echo: "The dir list: ${{steps.docker-deploy.outputs.dirlist}}"
-          echo: "The work directory: ${{steps.docker-deploy.outputs.work_dir}}"
+          echo "The dir list: ${{steps.docker-deploy.outputs.dirlist}}"
+          echo "The work directory: ${{steps.docker-deploy.outputs.work_dir}}"
